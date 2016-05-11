@@ -30,6 +30,12 @@
 	text-align: center;
 }
 
+.literature {
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
 table, th, td {
     border: 1px solid black;
     padding: 0 5px 0 5px;

@@ -32,24 +32,36 @@
           <br>
           <br>
 
+          <!--Literature-->
           There has been some literature on the signficiant of swing states. 
           <a href="http://economics.yale.edu/sites/default/files/ma_mclaren_swing_state_04-16.pdf"> Ma & McLaren(2016)</a>
           shows that under the American electoral system, the welfare of citizens in swing states is maximized. 
           <a href="http://www.stat.columbia.edu/~gelman/research/published/probdecisive2.pdf"> Gelman, Silver and Aaron (2009) </a>
           concludes that the probability that an individual's vote would matter is much much greater in swing states.
-          <img src="images/literature.png">
+          <a href="http://perseus.iies.su.se/~dstro/ElectoralCollege.pdf">Strömberg(2008)</a> illustrates in the graph below the relationship between resource allocation per electoral vote as a function of forecasted Democratic vote shares, and demonstrates that states with forecasted vote share close to 50% (i.e. swing states) are allocated with more resources. 
+          <br>
+          <br>
+          <img class="literature" src="images/literature.png">
+          <br>
 
           <br>
-          <br>
 
-        	From the Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a>, we downloaded the data of all individual contributions made to Presidential Candidates in the 2016 cycle. Relevant information include the amount of contribution, the date of contribution, and the origin of contribution.
+          We are interested in the patterns of campaign expenditure in relation to "swing state". In particular, we will investigate these two main questions:<br><br>
+          1. What are the geographic patterns of presidential campaign expenditure? <br>
+          2. How does the preceived competitiveness in a state and the number of electoral votes correlate with candidate's expenditure on a state? <br>
 
-          <br>
-          <br>
-          We first looked at the expenditure pattern in President Obama's 2012 reelection campaign.
+          <h3 id="intro"> Data Sets</h3> 
+          1. The Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a> provides a comprehensive dataset on all of the expenditures made by Presidential candidates in 2008, 2012 and 2016 cycle. information include the amount of expenditure, date of expenditure and the origin of expenditure. We limited the dataset to include only dates after general elections began, in order to account for differences in primary expenditures due to incumbent president in 2012. <br><br> 
+
+          2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no good datasets for election results were found. 
+
+          <br><br>
+
+          <h3 id ="intro"> 1. Patterns of Presidential Campaign Expenditure </h3>
+          We first looked at the expenditure pattern in President Obama's 2012 reelection campaign. <br><br>
 
           <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure Pattern </h4>
-          <div class="map" id="map2" style="width: 700px; height: 500px;"></div>
+          <div class="map" id="map1" style="width: 700px; height: 500px;"></div>
           <div class="legend">
             <table>
               <tr>
@@ -63,13 +75,12 @@
             Hover to find out how much Obama spent on that state in his 2008 campaign!
           </div>
           <br>
-            <em>Interested in seeing more interactive graphs? Click <a href = "prediction.html"> here </a> to see more!</em>
-          <br>
-          <br>
-            <h3 id="intro">Analysis and Findings</h3>
+          <em>Interested in seeing 1 more interactive graphs? Click <a href = "prediction.html">here</a> to see more!</em>
+          <br><br>
+
+          <h3 id="intro">2. Effect of Competitiveness of the State and Number of Electoral Votes on State Expenditure</h3>
             
-            <h3 id="intro">References</h3>
-            <p id="ref1"> 
+          <h3 id="intro">References</h3> 
         	</p>
 
         </div><!--End of Paragraph Div--> 

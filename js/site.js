@@ -54,7 +54,7 @@ var dict = {
 
 
 
-$('#map2').usmap({
+$('#map1').usmap({
 	useAllLabels: true,
 	stateHoverStyles: {}, //Override to do Nothing
 	stateSpecificStyles: {
