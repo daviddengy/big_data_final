@@ -27,38 +27,28 @@
         <div id="paragraph">
         	<h3 id="intro">Introduction</h3>
         	<p>
-        		From the Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a>, we downloaded the data of all individual contributions made to Presidential Candidates in the 2016 cycle. Relevant information include the amount of contribution, the date of contribution, and the origin of contribution.
+        	From the Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a>, we downloaded the data of all individual contributions made to Presidential Candidates in the 2016 cycle. Relevant information include the amount of contribution, the date of contribution, and the origin of contribution.
 
-        		<br>	
-        		<br> 
+          <br>
+          <br>
+          We first looked at the expenditure pattern in President Obama's 2012 reelection campaign.
 
-        		We also scraped prediction market data from the PredictWise <a href="http://predictwise.com">website</a>, in which time series data on candidate's expected probability to win in each state's primary and overall nomation is given.
-
-            <br>
-            <br>
-
-            <h4 class="graph_title">Visualization of the current Democratic Presidential Primary</h4>
-
-        		<div class="map" id="map1" style="width: 700px; height: 500px;"></div>
-            <div class="legend">
-              <table>
-                <tr>
-                  <td bgcolor="blue"> Hillary Wins</font> </td>
-                  <td bgcolor="green"> Bernie Wins</font> </td>
-                  <td bgcolor="darkgreen"> Bernie Upset Wins</font> </td>
-                </tr>
-              </table>
-            </div>
-            <br>
-
-            <div id="selected-state">
-              Hover over states to find out its expected primary results according to Prediction Market
-            </div>
-            <br>
-
-            The interactive graph above illustrates the information from the prediction market and the actual primary results. Green states represent states Sanders won, Blue states represent states Clinton won, while Dark Green states represent states Sander won in an upset. (i.e. states that Sanders was not expected to win) There are four upset States: Oklahoma(OK), Colorado (CO), Minnesota (MN) and Michigan (MI). The upset in Michigan is particularly surprising, as Hillary Clinton was expected to win that state with a probability of 92%. Hillary Clinton has not yet pulled an upset in this presidential primary.
-
-            <br>
+          <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure Pattern </h4>
+          <div class="map" id="map2" style="width: 700px; height: 500px;"></div>
+          <div class="legend">
+            <table>
+              <tr>
+                <td bgcolor='#BFEFFF'> <font color ="red">$0 - $7,800,000</font> </td>
+                <td bgcolor='#0276FD'> <font color ="red">$7,800,000 - $15,600,000</font></td>
+                <td bgcolor='#23238E'> <font color ="red">$15,600,000 - $26,100,000</font></td>
+              </tr>
+            </table>
+          </div>
+          <div id="selected-state">
+            Hover over states to find out how much Obama spent on that state in his 2008 campaign!
+          </div>
+          <br>
+          Interested in seeing more interactive graphs? Click <a href = "prediction.html"> here </a> to see more!
 
         	</p>
         </div><!--End of Paragraph Div--> 

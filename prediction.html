@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prediction Market Graph!</title>
+  <meta name="keywords" content="Campaign Funding, Hilary, Bernie, Clinton, Big Data">
+  <meta name="description" content="Big Data Final Project">
+  <link rel="stylesheet" href="css/combo.css">
+  <link rel="stylesheet" href="css/site.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="main">
+	<div id="intro" class="section p-intro">
+      	<div class="container center">
+			<h4 class="graph_title">Visualization of the 2016 Democratic Presidential Primary Results</h4>
+			<div class="map" id="map1" style="width: 700px; height: 500px;"></div>
+
+            <div class="legend">
+              <table>
+                <tr>
+                  <td bgcolor="blue"> <font color="white"> Hillary Wins</font> </td>
+                  <td bgcolor="green"> <font color="white"> Bernie Wins</font> </td>
+                  <td bgcolor="darkgreen"> <font color="white"> Bernie Upset Wins</font> </td>
+                </tr>
+              </table>
+            </div>
+            <div id="selected-state">
+              Hover over states to find out its expected primary results according to Prediction Market
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/raphael.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.usmap.js"></script>
+<script type="text/javascript" src="js/portfolio.pack.min.js"></script>
+<script type="text/javascript" src="js/prediction.js"></script>
+</html>
+    
