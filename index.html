@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Campaign Funding and Prediction Markets</title>
+  <title>Campaign Expenditure and State Competitiveness</title>
   <meta name="keywords" content="Campaign Funding, Hilary, Bernie, Clinton, Big Data">
   <meta name="description" content="Big Data Final Project">
   <link rel="stylesheet" href="css/combo.css">
@@ -51,7 +51,7 @@
           2. How does the preceived competitiveness in a state and the number of electoral votes correlate with candidate's expenditure on a state? <br>
 
           <h3 id="intro"> Data Sets</h3> 
-          1. The Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a> provides a comprehensive dataset on all of the expenditures made by Presidential candidates in 2008, 2012 and 2016 cycle. information include the amount of expenditure, date of expenditure and the origin of expenditure. We limited the dataset to include only dates after general elections began, in order to account for differences in primary expenditures due to incumbent president in 2012. <br><br> 
+          1. The Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a> provides a comprehensive dataset on all of the expenditures made by Presidential candidates in 2008, 2012 and 2016 cycle. Information include the amount of expenditure, date of expenditure and the origin of expenditure. We limited the dataset to include only dates after general elections began, in order to account for differences in primary expenditures due to incumbent president in 2012. We also cleaned the data slightly, for example excluding Obama's >$1 million expenditures on media and consulting companies<br><br> 
 
           2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no good datasets for election results were found. <br><br>
 
@@ -82,7 +82,7 @@
             Hover to find out how much Obama spent on that state in his 2008 campaign!
           </div>
           <br>
-          <em>Interested in seeing 1 more interactive graphs? Click <a href = "prediction.html">here</a> to see more!</em>
+          <em>Interested in seeing one more interactive graph? Click <a href = "prediction.html">here</a> to see more!</em>
           <br><br>
           Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite having 28 electoral votes, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">RI</a>, Maine and Vermont. 
           <br><br>
@@ -104,10 +104,16 @@
           The expenditure data we received was on a much larger scale than the data on electoral votes and adjusted spreads, so we wanted to scale the values down while also gaining some more insight. By taking the logarithm of the dependent variable, we expect expenditure to change by 100 * coefficients %  per unit of change in the x variable, holding all else equal.<br><br>
 
           <h3 id="intro">Results</h3>
-            <img class="literature" src="images/table1.png"><br>
+            We used the aggregate expenditure data per state for 2008 & 2012 Presidential cycle during the general election, and ran an OLS regression according to the model we presented. The results are presented here: <br><br>
+
+            <strong>Regression including expenditure from both Democrats and Republicans in 2008 and 2012</strong><br><br>
+            <img class="literature" src="images/table0.png"><br><br>
+
+            <strong>Regression using only Republicans expenditures in 2008 and 2012</strong><br><br>
+            <img class="literature" src="images/table1.png"><br><br>
+
+            <strong>Regression using only Democrats expenditures in 2008 and 2012</strong><br><br>
             <img class="literature" src="images/table2.png"><br>
-            <img class="literature" src="images/table3.png"><br>
-            <img class="literature" src="images/table4.png"><br>
 
           <br><br>
           <h3 id="intro">Conclusion</h3>
