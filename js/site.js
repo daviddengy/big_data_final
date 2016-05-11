@@ -125,7 +125,7 @@ $('#map1').usmap({
 	},
 	mouseout: function(event, data) {
 		$('#selected-state')
-      		.text('Hover over states to find out how much Obama spent on that state in his 2008 campaign!')
+      		.text('Hover to find out how much Obama spent on that state in his 2008 campaign!')
       		.css({"font-weight": "bold", "color": "black"});
 		
 	}

@@ -16,7 +16,7 @@
     <div id="intro" class="section p-intro">
 
       <div class="container center">
-        <h1 id="header">Campaign Funding and Prediction Markets</h1>
+        <h1 id="header">Campaign Expenditure and State Competitiveness</h1>
         <div id="authors">
         	<p> 
         		<img class="img-circle" src="images/quinn.jpg">
@@ -27,7 +27,7 @@
         <div id="paragraph">
         	<h3 id="intro">Introduction</h3>
         	<p>
-          The 2016 Presidential Cycle is well under way, with Donald Trump being the presumptive Republican candidate and Hillary Clinton the most likely Democratic candidate. Like many presdiential elections before this, there is a significant attention to "swing states", a term to describe states in which that are no overwhelming support for a particular party. (i.e. Ohio, in which the last three presidential elections were decided by a margin smaller than 5 percentage points)
+          The 2016 Presidential Cycle is well under way, with Donald Trump recently becoming the presumptive Republican candidate and Hillary Clinton the most likely Democratic candidate. Like many presdiential elections before this, there is a significant attention paid to "swing states", a term to describe states in which that is no overwhelming support for a particular party. (i.e. Ohio, in which the last three presidential elections were decided by a margin smaller than 5 percentage points)
 
           <br>
           <br>
@@ -36,9 +36,9 @@
           There has been some literature on the signficiance of swing states. 
           <a href="http://economics.yale.edu/sites/default/files/ma_mclaren_swing_state_04-16.pdf"> Ma & McLaren(2016)</a>
           shows that under the American electoral system, the welfare of citizens in swing states is maximized. 
-          <a href="http://www.stat.columbia.edu/~gelman/research/published/probdecisive2.pdf"> Gelman, Silver and Aaron (2009) </a>
+          <a href="http://www.stat.columbia.edu/~gelman/research/published/probdecisive2.pdf"> Gelman, Silver and Aaron (2009)</a>
           concludes that the probability that an individual's vote would matter is much much greater in swing states.
-          <a href="http://perseus.iies.su.se/~dstro/ElectoralCollege.pdf">Strömberg(2008)</a> illustrates in the graph below the relationship between resource allocation per electoral vote as a function of forecasted Democratic vote shares, and demonstrates that states with forecasted vote share close to 50% (i.e. swing states) are allocated with more resources. 
+          <a href="http://perseus.iies.su.se/~dstro/ElectoralCollege.pdf">Strömberg(2008)</a> illustrates in the graph below the relationship between resource allocation per electoral vote as a function of forecasted Democratic vote shares, and demonstrates that states with forecasted vote share closer to 50% (i.e. swing states) are allocated with more resources.
           <br>
           <br>
           <img class="literature" src="images/literature.png">
@@ -55,7 +55,7 @@
 
           2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no good datasets for election results were found. <br><br>
 
-          3. (No Longer Used) We began our report with exploring the relationship between Prediction Market and Contribution data, and whether an upset would affect the amount of contributions. However, no meaningful relationship was found between the two variables, and the data itself was difficult to deal with. The prediction market data on primaries only give odds on whether a candidate will win the whole state, but gives no information on the percentage of votes a candidate is expected to win. Hence, it is not a good instrument on estimating "upset". However, lots of efforts were spent scraping data from Predictwise and Pollyvote, and thus we present these data sets without further analysis.
+          3. (No Longer Used) We began our report with exploring the relationship between Prediction Market and Contribution data, and whether an upset would affect the amount of contributions. However, no meaningful relationship was found between the two variables, and the data itself was difficult to deal with. The prediction market data on primaries only give odds on whether a candidate will win the whole state, but gives no information on the percentage of votes a candidate is expected to win. Hence, it is not a good instrument on estimating "upset". Lots of efforts were spent scraping data from Predictwise and Pollyvote, and thus we present these data sets without further analysis.
           <br><br>
 
           <a href="pastdata/2012_pollyvote.csv" download>2012 Pollyvote Odds by Party</a><br>
@@ -84,12 +84,36 @@
           <br>
           <em>Interested in seeing 1 more interactive graphs? Click <a href = "prediction.html">here</a> to see more!</em>
           <br><br>
-          Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite having 28 electoral votes, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">RI</a>, Maine and Vermont.
+          Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite having 28 electoral votes, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">RI</a>, Maine and Vermont. 
+          <br><br>
+          <h3 id="intro">Economic Model</h3>
+          In order to predict how much a campaign spends in a given state, we need to find variables that are unaffected by the amount of money spent in a given state. One variable we used was the number of electoral college votes a state has to offer. The number of votes is proportional to the population in that state, and is independent of the campaign expenditure. Furthermore, candidates are incentivized to win a state with more electoral votes.
+          <br><br>
+          <img class="literature" src="images/graph.png">
+          Another explanatory variable we decided to use was the competitiveness between the Democratic and Republican Pary's vote per state in the previous election cycle. This historical cannot be changed either and could potentially play a role on campaign expenditure. A candidate may spend less money on a state where historically one party has a significant advantage over the other. On the other side of the spectrum where the spread is small, a candidate may decide to spend more time and resources where a clear winner may not be as obvious. It may be in the candidate’s favor to spend the extra money to give the campaign the edge it needs to win that state. 
+          
+          The relationship described can be modeled by the graph above, where y= 1/|x|. X is the absolute difference between voting percentages in each state, and y is our measure of competitiveness. It should be noted that this graph is fairly similar to the Strömberg's graph in our literature review. <br><br>
 
+          Our model: <br>
+          <img class="literature" src="images/equation.png">
+          <ul>
+            <li> expenditure<sub>i</sub> is the amount of expenditure spent in state<sub>i</sub> </li>
+            <li> electoralVotes<sub>i</sub> is the amount of electoral votes state<sub>i</sub> carries </li>
+            <li> competitiveness<sub>i</sub> is the reciprocal of the absolute difference between voting margin in state<sub>i</sub> in the last election
+          </ul>
+          The expenditure data we received was on a much larger scale than the data on electoral votes and adjusted spreads, so we wanted to scale the values down while also gaining some insightful meaning. By taking the logarithm of the dependent variable, we will be estimating the percent change in expenditure per unit of change in a parameter, holding all else equal.<br><br>
 
+          <h3 id="intro">Results</h3>
+            <img class="literature" src="images/table1.png"><br>
+            <img class="literature" src="images/table2.png"><br>
+            <img class="literature" src="images/table3.png"><br>
+            <img class="literature" src="images/table4.png"><br>
 
-          <h3 id="intro">2. Effect of Competitiveness of the State and Number of Electoral Votes on State Expenditure</h3>
-            
+          <br><br>
+          <h3 id="intro">Conclusion</h3>
+            Found a positive B<sub>2</sub> estimator, which suggests there are higher campaign expenditure in states that were competitive in the last election. Also found a positive B<sub>1</sub> estimator, which suggests that candidates tend to spend more money on states that have a higher electoral votes, which makes intuitive sense.
+
+          <br><br>
           <h3 id="intro">References</h3> 
         	</p>
 
