@@ -28,7 +28,7 @@
         <div id="paragraph">
         	<h3 id="intro">Introduction</h3>
         	<p>
-          The 2016 Presidential Cycle is well under way, with Donald Trump recently becoming the presumptive Republican candidate and Hillary Clinton the most likely Democratic candidate. Like many presdiential elections before this, there is a significant attention paid to "swing states", a term to describe states in which that is no overwhelming support for a particular party. (i.e. Ohio, in which the last three presidential elections were decided by a margin smaller than 5 percentage points)
+          The 2016 Presidential Cycle is well under way, with Donald Trump recently becoming the presumptive Republican candidate and Hillary Clinton the most likely Democratic candidate. Like many presdiential elections before this, there is a significant attention paid to "swing states", a term to describe states that has no overwhelming support for a particular party. (i.e. Ohio, in which the last three presidential elections were decided by a margin smaller than 5 percentage points)
 
           <br>
           <br>
@@ -38,7 +38,7 @@
           <a href="http://economics.yale.edu/sites/default/files/ma_mclaren_swing_state_04-16.pdf"> Ma & McLaren(2016)</a>
           shows that under the American electoral system, the welfare of citizens in swing states is maximized. 
           <a href="http://www.stat.columbia.edu/~gelman/research/published/probdecisive2.pdf"> Gelman, Silver and Aaron (2009)</a>
-          concludes that the probability that an individual's vote would matter is much much greater in swing states.
+          concludes that the probability an individual's vote would matter is much greater in swing states.
           <a href="http://perseus.iies.su.se/~dstro/ElectoralCollege.pdf">Strömberg(2008)</a> illustrates in the graph below the relationship between resource allocation per electoral vote as a function of forecasted Democratic vote shares, and demonstrates that states with forecasted vote share closer to 50% (i.e. swing states) are allocated with more resources.
           <br>
           <br>
@@ -47,16 +47,16 @@
 
           <br>
 
-          We are interested in the patterns of campaign expenditure in relation to "swing state". In particular, we will investigate these two main questions:<br><br>
-          1. What are the geographic patterns of presidential campaign expenditure? <br>
+          We are interested in the patterns of campaign expenditure on itself and in relation to "swing state". In particular, we will investigate these two main questions:<br><br>
+          1. What are the patterns of presidential campaign expenditure? <br>
           2. How does the preceived competitiveness in a state and the number of electoral votes correlate with candidate's expenditure on a state? <br>
 
           <h3 id="intro"> Data Sets</h3> 
-          1. The Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a> provides a comprehensive dataset on all of the expenditures made by Presidential candidates in 2008, 2012 and 2016 cycle. Information include the amount of expenditure, date of expenditure and the origin of expenditure. We limited the dataset to include only dates after general elections began, in order to account for differences in primary expenditures due to incumbent president in 2012. We also cleaned the data slightly, for example excluding Obama's >$1 million expenditures on media and consulting companies<br><br> 
+          1. The Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a> provides a comprehensive dataset on all of the expenditures made by Presidential candidates in 2008, 2012 and 2016 cycle. Information include the amount of expenditure, date of expenditure and the origin of expenditure. We limited the dataset to include only dates after general elections began, in order to account for differences in primary expenditures due to incumbent president in 2012. We also slightly cleaned the data, for example excluding Obama's >$1 million expenditures on media and consulting companies<br><br> 
 
-          2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no good datasets for election results were found. <br><br>
+          2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no other good datasets for election results were found. <br><br>
 
-          3. (No Longer Used) We began our report with exploring the relationship between Prediction Market and Contribution data, and whether an upset would affect the amount of contributions. However, no meaningful relationship was found between the two variables, and the data itself was difficult to deal with. The prediction market data on primaries only give odds on whether a candidate will win the whole state, but gives no information on the percentage of votes a candidate is expected to win. Hence, it is not a good instrument on estimating "upset". Lots of efforts were spent scraping data from Predictwise and Pollyvote, and thus we present these data sets without further analysis.
+          3. (No Longer Used) We began our report with exploring the relationship between prediction market and campaign contribution data, and whether an upset would affect the amount of contributions. However, no meaningful relationship was found between the two variables, and the data itself was difficult to deal with. The prediction market data on primaries only give odds on whether a candidate will win the whole state, but gives no information on the percentage of votes a candidate is expected to win. Hence, it is not a good instrument on estimating "upset". Lots of efforts were spent scraping data from Predictwise and Pollyvote, and thus we present these data sets without further analysis.
           <br><br>
 
           <a href="pastdata/2012_pollyvote.csv" download>2012 Pollyvote Odds by Party</a><br>
@@ -66,7 +66,7 @@
           <br><br>
 
           <h3 id ="intro"> Patterns of Presidential Campaign Expenditure </h3>
-          We first looked at the expenditure pattern in President Obama's 2008 reelection campaign. <br><br>
+          We first looked at the expenditure pattern in President Obama's 2008 presidential campaign. <br><br>
 
           <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure Pattern in General Election</h4>
           <div class="map" id="map1" style="width: 700px; height: 500px;"></div>
@@ -85,18 +85,18 @@
           <br>
           <em>Interested in seeing one more interactive graph? Click <a href = "prediction.html">here</a> to see more!</em>
           <br><br>
-          Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite having 28 electoral votes, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">RI</a>, Maine and Vermont. 
+          Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite it having the second highest number of electoral votes of 28, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">Rhode Island</a>, Maine and Vermont. 
           <br><br>
           <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure over Time</h4>
           <img class="literature" src="images/obama.png">
           <br><br>
-          On the time-series graph above, it can be seen that the expenditure of Obama's campaign increases until the general election day, then it gradually declines. This trend of increasing expenditure makes intuitive sense, as campaign managers are incentivzed to spend all of the money before election day as a last-ditch effort to increase support.<br><br>
+          On the time-series graph above, it can be seen that the expenditure of Obama's campaign increases until the general election day, then gradually declines. This trend of increasing expenditure makes intuitive sense, as campaign managers are incentivzed to spend all of the money before election day as a last-ditch effort to increase support.<br><br>
 
           <h3 id="intro">Economic Model</h3>
           In order to predict how much a campaign spends in a given state, we need to find variables that are unaffected by the amount of money spent in a given state. One variable we used was the number of electoral college votes a state has to offer. The number of votes is proportional to the population in that state, and is independent of the campaign expenditure. Furthermore, candidates are incentivized to win a state with more electoral votes.
           <br><br>
           <img class="literature" src="images/graph.png">
-          Another explanatory variable we decided to use was the competitiveness between the Democratic and Republican Pary's vote per state in the previous election cycle. This historical cannot be changed either and could potentially play a role on campaign expenditure. A candidate may spend less money on a state where historically one party has a significant advantage over the other. On the other side of the spectrum where the spread is small, a candidate may decide to spend more time and resources where a clear winner may not be as obvious. It may be in the candidate’s favor to spend the extra money to give the campaign the edge it needs to win that state. 
+          Another explanatory variable we decided to use was the competitiveness between the Democratic and Republican Pary's vote per state in the previous election cycle. This historical fact cannot be changed either and could potentially play a role on campaign expenditure. A candidate may spend less money on a state where historically one party has a significant advantage over the other. On the other side of the spectrum where the spread is small, a candidate may decide to spend more time and resources where a clear winner may not be as obvious. It may be in the candidate’s favor to spend the extra money to give the campaign the edge it needs to win that state. 
           
           The relationship described can be modeled by the graph above, where <strong>y= 1/|x|</strong>. x is the absolute difference between voting percentages in each state, and y is our measure of competitiveness. It should be noted that this graph is fairly similar to the Strömberg's graph in our literature review. <br><br>
 
@@ -112,13 +112,13 @@
           <h3 id="intro">Results</h3>
             We used the aggregate expenditure data per state for 2008 & 2012 Presidential cycle during the general election, and ran an OLS regression according to the model we presented. The results are presented here: <br><br>
 
-            <strong>Regression including expenditure from both Democrats and Republicans in 2008 and 2012</strong><br><br>
+            <strong>1. Regression including expenditure from both Democrats and Republicans in 2008 and 2012</strong><br><br>
             <img class="literature" src="images/table0.png"><br><br>
 
-            <strong>Regression using only Republicans expenditures in 2008 and 2012</strong><br><br>
+            <strong>2. Regression using only Republicans expenditures in 2008 and 2012</strong><br><br>
             <img class="literature" src="images/table1.png"><br><br>
 
-            <strong>Regression using only Democrats expenditures in 2008 and 2012</strong><br><br>
+            <strong>3. Regression using only Democrats expenditures in 2008 and 2012</strong><br><br>
             <img class="literature" src="images/table2.png"><br>
 
           <br><br>
@@ -128,11 +128,13 @@
             One thing to note about the regression is that the constant term is very large. It would seem that a lot of the explanatory power of the model goes to the constant term, however, we must consider the scale at which we are interpreting these results. Romney spent over $214 million dollars in Massachusetts in 2012. These numbers can get quite big, so the results of the model tend to have large intercepts. On the other hand, the model also suggests that candidates often will not completely neglect a state just because the odds are too for/against them or there are too few electoral votes. This led us to an interesting thought experiment. Would a candidate spend money on a state with little-to-no voting power or not competitive? We decided to see what would happen if we ran a regression through the origin. 
             <br><br>
 
+            <strong> 4. Regression using aggregate expenditures without constant term</strong>
             <img class="literature" src="images/table3.png"><br><br>
 
             The results were incredibly significant, but we believe artificially so. Running a regression through the origin imposes the assumption that expenditure will not change when there are no electoral votes at stake nor any competitiveness. We may be making our coefficients artificially large and the model artificially more significant at the price of inaccuracy. It would be interesting to look more deeply at whether or not a regression without a constant would be a more accurate interpretation of the relationship between expenditure and our explanatory variables.<br><br>
 
-          <br><br>
+            Going back to the first regression table 1, with aggregate data of both Democrat and Republicans, we should note that the p-value for B<sub>2</sub> is 0.019. This means we can reject the null hypothesis, and the coefficient we estimated is significant. This shows the positive correlation between state expenditure and its competitiveness in the last election, and raises the question on whether the current electoral system, which encourages this behavior, is <em>fair</em>? Specifically, is it an effective system for presidential candidates to focus most of his/her campaigning efforts on "swing state" and may neglect the wants and needs of citizens from other states? <br><br>
+
           <h3 id="intro">References</h3>
           Gelman, A., Silver, N., & Edlin, A. (2009). What is the probability your vote will make a difference? <em>National Bureau of Economic Research.</em> Retrieved from http://www.stat.columbia.edu/~gelman/research/published/probdecisive2.pdf<br><br>
           McLauren, J., & Ma, X. (2016). A Swing-State Theorem, with Evidence. Retrieved from http://economics.yale.edu/sites/default/files/ma_mclaren_swing_state_04-16.pdf<br><br>
