@@ -122,8 +122,14 @@
             <img class="literature" src="images/table2.png"><br>
 
           <br><br>
-          <h3 id="intro">Conclusion and Limitations</h3>
-            Found a positive B<sub>2</sub> estimator, which suggests there are higher campaign expenditure in states that were competitive in the last election. Also found a positive B<sub>1</sub> estimator, which suggests that candidates tend to spend more money on states that have a higher electoral votes, which makes intuitive sense.
+          <h3 id="intro">Analysis and Limitations</h3>
+            Separately the data proved to be somewhat significant. The problem with the above regressions though was that we had too few data points (only about 50 data points for each party per election). We decided to make our analysis more accurate by aggregating the data and using it all in one regression. The results proved to be even more significant. Our t-statistics increased dramatically. The new relationship between the change in expenditure and electoral votes and competitiveness proved that the competitiveness of a state plays an important role in determining how much a campaign will/should spend on a given state. The new regression predict that for each unit increase in electoral votes, the amount spent in a state would increase by about 14% again, but an increase in competitiveness increases the amount spent by about 33.4%. Aggregating the data seems natural because the democrats and the republicans are not in independent elections. There is an interaction between the two, so we want to make sure that the relationship is present in the model. <br><br>
+
+            One thing to note about the regression is that the constant term is very large. It would seem that a lot of the explanatory power of the model goes to the constant term, however, we must consider the scale at which we are interpreting these results. Romney spent over $214 million dollars in Massachusetts in 2012. These numbers can get quite big, so the results of the model tend to have large intercepts. On the other hand, the model also suggest that candidates often will not completely neglect a state just because the odds are too for/against them or there are too few electoral votes. This led us to an interesting thought experiment. Would a candidate spend money on a state with little-to-no voting power or not competitive? We decided to see what would happen if we ran a regression through the origin. <br><br>
+
+            <img class="literature" src="images/table3.png"><br><br>
+
+            The results were incredibly significant, but we believe artificially so. Running a regression through the origin imposes the assumption that expenditure will not change when there are no electoral votes at stake nor any competitiveness. We may be making our coefficients artificially large and the model artificially more significant at the price of inaccuracy. It would be interesting to look more deeply at whether or not a regression without a constant would be a more accurate interpretation of the relationship between expenditure and our explanatory variables.<br><br>
 
           <br><br>
           <h3 id="intro">References</h3>
