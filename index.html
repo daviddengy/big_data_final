@@ -2,6 +2,7 @@
 <html dir="ltr" lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Campaign Expenditure and State Competitiveness</title>
   <meta name="keywords" content="Campaign Funding, Hilary, Bernie, Clinton, Big Data">
@@ -86,13 +87,18 @@
           <br><br>
           Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite having 28 electoral votes, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">RI</a>, Maine and Vermont. 
           <br><br>
+          <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure over Time</h4>
+          <img class="literature" src="images/obama.png">
+          <br>
+          <br>
+
           <h3 id="intro">Economic Model</h3>
           In order to predict how much a campaign spends in a given state, we need to find variables that are unaffected by the amount of money spent in a given state. One variable we used was the number of electoral college votes a state has to offer. The number of votes is proportional to the population in that state, and is independent of the campaign expenditure. Furthermore, candidates are incentivized to win a state with more electoral votes.
           <br><br>
           <img class="literature" src="images/graph.png">
           Another explanatory variable we decided to use was the competitiveness between the Democratic and Republican Pary's vote per state in the previous election cycle. This historical cannot be changed either and could potentially play a role on campaign expenditure. A candidate may spend less money on a state where historically one party has a significant advantage over the other. On the other side of the spectrum where the spread is small, a candidate may decide to spend more time and resources where a clear winner may not be as obvious. It may be in the candidate’s favor to spend the extra money to give the campaign the edge it needs to win that state. 
           
-          The relationship described can be modeled by the graph above, where y= 1/|x|. X is the absolute difference between voting percentages in each state, and y is our measure of competitiveness. It should be noted that this graph is fairly similar to the Strömberg's graph in our literature review. <br><br>
+          The relationship described can be modeled by the graph above, where <strong>y= 1/|x|</strong>. x is the absolute difference between voting percentages in each state, and y is our measure of competitiveness. It should be noted that this graph is fairly similar to the Strömberg's graph in our literature review. <br><br>
 
           Our model: <br>
           <img class="literature" src="images/equation.png">
@@ -116,7 +122,7 @@
             <img class="literature" src="images/table2.png"><br>
 
           <br><br>
-          <h3 id="intro">Conclusion</h3>
+          <h3 id="intro">Conclusion and Limitations</h3>
             Found a positive B<sub>2</sub> estimator, which suggests there are higher campaign expenditure in states that were competitive in the last election. Also found a positive B<sub>1</sub> estimator, which suggests that candidates tend to spend more money on states that have a higher electoral votes, which makes intuitive sense.
 
           <br><br>
@@ -134,7 +140,6 @@
 </body>
 
 <script type="text/javascript" src="js/raphael.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.usmap.js"></script>
 <script type="text/javascript" src="js/portfolio.pack.min.js"></script>
 <script type="text/javascript" src="js/site.js"></script>
