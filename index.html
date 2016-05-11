@@ -128,7 +128,7 @@
             One thing to note about the regression is that the constant term is very large. It would seem that a lot of the explanatory power of the model goes to the constant term, however, we must consider the scale at which we are interpreting these results. Romney spent over $214 million dollars in Massachusetts in 2012. These numbers can get quite big, so the results of the model tend to have large intercepts. On the other hand, the model also suggests that candidates often will not completely neglect a state just because the odds are too for/against them or there are too few electoral votes. This led us to an interesting thought experiment. Would a candidate spend money on a state with little-to-no voting power or not competitive? We decided to see what would happen if we ran a regression through the origin. 
             <br><br>
 
-            <strong> 4. Regression using aggregate expenditures without constant term</strong><br>
+            <strong> 4. Regression using aggregate expenditures without constant term</strong><br><br>
             <img class="literature" src="images/table3.png"><br><br>
 
             The results were incredibly significant, but we believe artificially so. Running a regression through the origin imposes the assumption that expenditure will not change when there are no electoral votes at stake nor any competitiveness. We may be making our coefficients artificially large and the model artificially more significant at the price of inaccuracy. It would be interesting to look more deeply at whether or not a regression without a constant would be a more accurate interpretation of the relationship between expenditure and our explanatory variables.<br><br>
