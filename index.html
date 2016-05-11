@@ -33,7 +33,7 @@
           <br>
 
           <!--Literature-->
-          There has been some literature on the signficiant of swing states. 
+          There has been some literature on the signficiance of swing states. 
           <a href="http://economics.yale.edu/sites/default/files/ma_mclaren_swing_state_04-16.pdf"> Ma & McLaren(2016)</a>
           shows that under the American electoral system, the welfare of citizens in swing states is maximized. 
           <a href="http://www.stat.columbia.edu/~gelman/research/published/probdecisive2.pdf"> Gelman, Silver and Aaron (2009) </a>
@@ -53,14 +53,21 @@
           <h3 id="intro"> Data Sets</h3> 
           1. The Federal Election Commision(FEC) <a href="http://www.fec.gov/disclosurep/pnational.do">website</a> provides a comprehensive dataset on all of the expenditures made by Presidential candidates in 2008, 2012 and 2016 cycle. information include the amount of expenditure, date of expenditure and the origin of expenditure. We limited the dataset to include only dates after general elections began, in order to account for differences in primary expenditures due to incumbent president in 2012. <br><br> 
 
-          2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no good datasets for election results were found. 
+          2. The 270ToWin <a href="http://www.270towin.com/states/"> website</a> provides the election results for each state, broken down to the percentage vote for each party. The data, however, has to be manually scraped – no good datasets for election results were found. <br><br>
+
+          3. (No Longer Used) We began our report with exploring the relationship between Prediction Market and Contribution data, and whether an upset would affect the amount of contributions. However, no meaningful relationship was found between the two variables, and the data itself was difficult to deal with. The prediction market data on primaries only give odds on whether a candidate will win the whole state, but gives no information on the percentage of votes a candidate is expected to win. Hence, it is not a good instrument on estimating "upset". However, lots of efforts were spent scraping data from Predictwise and Pollyvote, and thus we present these data sets without further analysis.
+          <br><br>
+
+          <a href="pastdata/2012_pollyvote.csv" download>2012 Pollyvote Odds by Party</a><br>
+          <a href="pastdata/2016_pollyvote.csv" download>2016 Pollyvote Odds by Party</a><br>
+          <a href="pastdata/2016_primary_predictwise.csv" download>2016 Predictwise Odds by Primary in Each State</a><br>
 
           <br><br>
 
           <h3 id ="intro"> 1. Patterns of Presidential Campaign Expenditure </h3>
-          We first looked at the expenditure pattern in President Obama's 2012 reelection campaign. <br><br>
+          We first looked at the expenditure pattern in President Obama's 2008 reelection campaign. <br><br>
 
-          <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure Pattern </h4>
+          <h4 class="graph_title">Visualization of Obama 2008 Campaign's Expenditure Pattern in General Election</h4>
           <div class="map" id="map1" style="width: 700px; height: 500px;"></div>
           <div class="legend">
             <table>
@@ -77,6 +84,9 @@
           <br>
           <em>Interested in seeing 1 more interactive graphs? Click <a href = "prediction.html">here</a> to see more!</em>
           <br><br>
+          Several interesting patterns can be seen on this map. It should be noted that Illinois, Wisconsin and Missouri were all considered swing states in the 2008 election campaign, and most of the campaign's expenditure went to those states. Also, candidates do not necessarily spend more money on states that have higher electoral votes. For example, Obama only spent ~$1.8 million on Texas, despite having 28 electoral votes, probably because it is highly likely to vote Republican no matter what. Similarly, Obama campaign team did not spend much on states that are traditionally Democratic, like <a href="https://www.visitrhodeisland.com/">RI</a>, Maine and Vermont.
+
+
 
           <h3 id="intro">2. Effect of Competitiveness of the State and Number of Electoral Votes on State Expenditure</h3>
             
